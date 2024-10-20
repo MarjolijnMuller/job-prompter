@@ -25,3 +25,7 @@ h1 {
     font-size: 11px;
     color: #d13202;
 }
+
+h2 {
+    text-transform: capitalize;
+}
