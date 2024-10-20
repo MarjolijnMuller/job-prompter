@@ -80,47 +80,49 @@ console.log("De afdeling Customer Service heeft " + departments["customer-servic
 console.log("Sales is een uitdagende afdeling om te werken als Verkoopmanager. " + departments.sales.jobs[1].description);*/
 
 /*opdracht 2*/
-/*
 const userInput = prompt("Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]");
+const department = userInput;
 
-switch (userInput) {
+switch (department) {
     case "marketing":
-        console.log("Je koos " + userInput + ". " + departments.marketing.description);
+        /*console.log("Je koos " + userInput + ". " + departments.marketing.description);*/
+        console.log("Marketing is een leuke afdeling om te werken. Er werken op dit moment "+ departments[department].numberOfEmployees+ " medewerkers.");
         break;
     case "sales":
-        console.log("Je koos " + userInput + ". " + departments.sales.description);
+        /*console.log("Je koos " + userInput + ". " + departments.sales.description);*/
+        console.log("Sales is een leuke afdeling om te werken. Er werken op dit moment "+ departments[department].numberOfEmployees+ " medewerkers.");
         break;
     case "customer-service":
-        console.log("Je koos " + userInput + ". " + departments["customer-service"].description);
+        console.log("Customer-service is een leuke afdeling om te werken. Er werken op dit moment "+ departments[department].numberOfEmployees+ " medewerkers.");
+        /*console.log("Je koos " + userInput + ". " + departments["customer-service"].description);*/
         break;
     default:
         console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
         break;
-}*/
+}
 
-const userInput = prompt("Je koos marketing. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in.\n" +
-    "0: " + departments.marketing.jobs[0].title + "\n" +
-    "1: " + departments.marketing.jobs[1].title + "\n" +
-    "2: " + departments.marketing.jobs[2].title + "\n" +
-    "3: " + departments.marketing.jobs[3].title + "\n" +
-    "4: " + departments.marketing.jobs[4].title
+
+
+/*opdracht 3*/
+const userInputJob = prompt("Je koos " + department + ". Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in.\n" +
+    "0: " + departments[department].jobs[0].title + "\n" +
+    "1: " + departments[department].jobs[1].title + "\n" +
+    "2: " + departments[department].jobs[2].title + "\n" +
+    "3: " + departments[department].jobs[3].title
 );
 
-switch (userInput) {
+switch (userInputJob) {
     case "0":
-        console.log("Je koos " + departments.marketing.jobs[0].title + ". Een uitdagende rol! " + departments.marketing.jobs[0].description);
+        console.log("Je koos " + departments[department].jobs[0].title + ". Een uitdagende rol! " + departments[department].jobs[0].description);
         break;
     case "1":
-        console.log("Je koos " + departments.marketing.jobs[1].title + ". Een uitdagende rol! " + departments.marketing.jobs[1].description);
+        console.log("Je koos " + departments[department].jobs[1].title + ". Een uitdagende rol! " + departments[department].jobs[1].description);
         break;
     case "2":
-        console.log("Je koos " + departments.marketing.jobs[2].title + ". Een uitdagende rol! " + departments.marketing.jobs[2].description);
+        console.log("Je koos " + departments[department].jobs[2].title + ". Een uitdagende rol! " + departments[department].jobs[2].description);
         break;
     case "3":
-        console.log("Je koos " + departments.marketing.jobs[3].title + ". Een uitdagende rol! " + departments.marketing.jobs[3].description);
-        break;
-    case "4":
-        console.log("Je koos " + departments.marketing.jobs[4].title + ". Een uitdagende rol! " + departments.marketing.jobs[4].description);
+        console.log("Je koos " + departments[department].jobs[3].title + ". Een uitdagende rol! " + departments[department].jobs[3].description);
         break;
     default:
         console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
